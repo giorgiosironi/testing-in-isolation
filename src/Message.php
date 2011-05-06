@@ -15,4 +15,13 @@ class Message
     {
         return $this->address;
     }
+
+    public function compare(Message $another)
+    {
+        if ($this->date > $another->date) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
 }

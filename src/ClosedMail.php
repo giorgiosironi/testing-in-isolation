@@ -4,7 +4,7 @@ class ClosedMail
     private $subject;
     private $address;
 
-    public function __construct($subject, $address)
+    public function __construct($subject, MailAddress $address)
     {
         $this->subject = $subject;
         $this->address = $address;

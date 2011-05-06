@@ -1,5 +1,5 @@
 <?php
-class NewMessageLinkAddress
+class NewMessageLinkAddress implements MailAddress
 {
     private $address;
 

@@ -1,5 +1,5 @@
 <?php
-class MailtoAddress
+class MailtoAddress implements MailAddress
 {
     private $address;
 

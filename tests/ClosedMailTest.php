@@ -21,4 +21,10 @@ class ClosedMailTest extends PHPUnit_Framework_TestCase
                   . "</tr>";
         $this->assertEquals($expected, $mail->__toString());
     }
+
+    public function testShowAMailSubjectAndSenderAddressWithNoLink()
+    {
+        // $mail = new ClosedMail('Urgent', new PlainTextAddress('isaac@example.com'));
+        $this->markTestIncomplete();
+    }
 }

@@ -16,8 +16,8 @@ class AddressBookGenerator
         $addresses = array();
         for ($i = 0; $i < $this->sample; $i++) {
             $message = $this->messages->getNext();
-            $addresses[] = $message->getAddress();
+            $addresses[$message->getAddress()] = true;
         }
-        return $addresses;
+        return array_keys($addresses);
     }
 }

@@ -9,6 +9,10 @@ class AddressBookGeneratorTest extends PHPUnit_Framework_TestCase
             new Message('2@example.com', null),
             new Message('3@example.com', null)
         )));
+        $this->assertEquals(array(
+            '1@example.com',
+            '2@example.com'
+        ), $generator->getAddresses());
     }
 }
 

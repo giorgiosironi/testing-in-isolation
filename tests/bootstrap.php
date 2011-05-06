@@ -8,3 +8,5 @@ require_once $src . 'NewMessageLinkAddress.php';
 require_once $src . 'AddressBookGenerator.php';
 require_once $src . 'Messages.php';
 require_once $src . 'Message.php';
+require_once $src . 'MessagesFromNewer.php';
+require_once $src . 'SplMaxHeapForMessages.php';

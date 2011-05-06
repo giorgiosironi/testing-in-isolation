@@ -11,4 +11,14 @@ class ClosedMailTest extends PHPUnit_Framework_TestCase
                   . "</tr>";
         $this->assertEquals($expected, $mail->__toString());
     }
+
+    public function testShowAMailSubjectAndSenderAddressWithAnInApplicationLink()
+    {
+        $mail = new ClosedMail('Urgent', 'isaac@example.com', false);
+        $expected = "<tr>\n"
+                  . "<td class=\"subject\">Urgent</td>\n"
+                  . "<td class=\"address\"><a href=\"/new-mail?to=isaac@example.com\">isaac@example.com</a></td>\n"
+                  . "</tr>";
+        $this->assertEquals($expected, $mail->__toString());
+    }
 }

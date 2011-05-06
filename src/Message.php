@@ -10,4 +10,9 @@ class Message
         $this->address = $address;
         $this->date = $date;
     }
+
+    public function getAddress()
+    {
+        return $this->address;
+    }
 }

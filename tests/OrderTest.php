@@ -5,7 +5,7 @@ class OrderTest extends PHPUnit_Framework_TestCase
     public function setUp()
     {
         $connection = new PDO('sqlite::memory:');
-        $connection->exec('CREATE TABLE Order (
+        $connection->exec('CREATE TABLE order_table (
                             id INTEGER PRIMARY KEY AUTOINCREMENT,
                             unitPrice INTEGER,
                             quantity INTEGER
@@ -18,8 +18,8 @@ class OrderTest extends PHPUnit_Framework_TestCase
         $order = new Order();
         $order->setQuantity(2)
               ->setUnitPrice(10);
-        $repository->addOrder($order);
-        $price = $repository->getOrderTotalPrice($order->id);
+        $this->repository->addOrder($order);
+        $price = $this->repository->getOrderTotalPrice(1);
         $this->assertEquals(20, $price);
     }
 }

@@ -2,7 +2,7 @@
 
 class NewMessageLinkAddressTest extends PHPUnit_Framework_TestCase
 {
-    public function testShowAMailSubjectAndSenderAddressWithAnInApplicationLink()
+    public function testShowAnAddressWithAnInApplicationLink()
     {
         $address = new NewMessageLinkAddress('isaac@example.com');
         $expected = "<a href=\"/new-mail?to=isaac@example.com\">isaac@example.com</a>";

@@ -12,6 +12,11 @@ class Order
         return $this;
     }
 
+    public function getUnitPrice()
+    {
+        return $this->unitPrice;
+    }
+
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
@@ -33,7 +38,15 @@ class Order
     {
         return array(
             'unitPrice' => $this->unitPrice,
-            'quantity' => $this->quantity
+            'quantity' => $this->quantity,
+            'totalPrice' => $this->totalPrice
         );
+    }
+
+    public function setState(array $state)
+    {
+        $this->unitPrice = $state['unitPrice'];
+        $this->quantity = $state['quantity'];
+        $this->totalPrice = $state['totalPrice'];
     }
 }

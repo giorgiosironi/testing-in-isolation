@@ -2,21 +2,9 @@
 
 class OpenMailTest extends PHPUnit_Framework_TestCase
 {
-    public function testShowAMailSubjectTextAndSenderAddressWithAMailtoLink()
+    public function testShowAMailSubjectTextAndTheSenderAddress()
     {
-        // $mail = new OpenMail('Urgent', 'Lorem ipsum...', new MailtoAddress('isaac@example.com'));
-        $this->markTestIncomplete();
-    }
-
-    public function testShowAMailSubjectTextAndSenderAddressWithAnInApplicationLink()
-    {
-        // $mail = new OpenMail('Urgent', 'Lorem ipsum...', new NewMessageLinkAddress('isaac@example.com'));
-        $this->markTestIncomplete();
-    }
-
-    public function testShowAMailSubjectTextAndSenderAddressWithNoLink()
-    {
-        // $mail = new OpenMail('Urgent', 'Lorem ipsum...', new PlainTextAddress('isaac@example.com'));
+        // $mail = new OpenMail('Urgent', 'Lorem ipsum...', $stubAddress));
         $this->markTestIncomplete();
     }
 }
